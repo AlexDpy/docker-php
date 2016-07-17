@@ -17,12 +17,11 @@ RUN apk add --no-cache --virtual .build-deps \
     libedit-dev \
     libxml2-dev \
     openssl-dev \
-    sqlite-dev \
+    sqlite-dev
 
-&& docker-php-ext-install \
+RUN docker-php-ext-install \
     bcmath \
     curl \
-    date \
     exif \
     fileinfo \
     ftp \
@@ -50,14 +49,14 @@ RUN apk add --no-cache --virtual .build-deps \
     reflection \
     session \
     sqlite3 \
-    zip \
+    zip
 
-&& pecl install \
+RUN pecl install \
     xdebug \
 && docker-php-ext-enable \
-    xdebug \
+    xdebug
 
-&& apk del .build-deps
+RUN apk del .build-deps
 
 VOLUME ["/app"]
 WORKDIR /app
