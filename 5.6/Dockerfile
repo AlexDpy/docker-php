@@ -36,9 +36,7 @@ RUN docker-php-ext-install \
     mysql \
     mysqli \
     opcache \
-    openssl \
     pcntl \
-    pcre \
     pdo \
     pdo_mysql \
     pdo_pgsql \
@@ -48,7 +46,6 @@ RUN docker-php-ext-install \
     posix \
     reflection \
     session \
-    sqlite3 \
     zip
 
 RUN pecl install \

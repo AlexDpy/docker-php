@@ -20,7 +20,6 @@ RUN apk add --no-cache --virtual .build-deps \
     sqlite-dev
 
 RUN docker-php-ext-install \
-    bcmath \
     curl \
     exif \
     fileinfo \
@@ -35,9 +34,7 @@ RUN docker-php-ext-install \
     mcrypt \
     mysqli \
     opcache \
-    openssl \
     pcntl \
-    pcre \
     pdo \
     pdo_mysql \
     pdo_pgsql \
@@ -47,7 +44,6 @@ RUN docker-php-ext-install \
     posix \
     reflection \
     session \
-    sqlite3 \
     zip
 
 RUN pecl install \
