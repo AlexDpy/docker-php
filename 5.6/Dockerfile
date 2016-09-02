@@ -56,6 +56,7 @@ RUN pecl install \
 RUN apk del .build-deps
 
 EXPOSE 80
+EXPOSE 8080
 
 VOLUME ["/app"]
 WORKDIR /app
